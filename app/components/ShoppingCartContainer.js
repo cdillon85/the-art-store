@@ -1,15 +1,23 @@
 import React, { Component } from 'react'
 import ShoppingCartComponent from './ShoppingCartComponent'
+import {connect} from 'react-redux'
 
-// const MapStateToProps = (state) => {
-// 	const productLines = state.productLines
+
+const MapStateToProps = (state) => {
+	const cart = state.cart
+	return {
+		productLines: cart.productLines
+	}
+}
+
+// const MapDispatchToProps = (dispatch) => {
+
 // }
 
-// const MapDispatchToProps
 
 
 
-export default class ShoppingCartContainer extends Component {
+class ShoppingCartContainer extends Component {
 
 	constructor(props) {
 		super(props)
@@ -23,15 +31,21 @@ export default class ShoppingCartContainer extends Component {
 		if (this.props.productLines) {
 			return (
 				<div>
-					<ShoppingCartComponent productLines={this.state.productLines} />
+					<ShoppingCartComponent {...this.props} />
 				</div>
 			)
 		} else {
 			return (
-				<div><h1>Your Cart Is Empty!</h1></div>
+				<div>
+				<h1>Your Cart Is Empty!</h1>
+				</div>
 				)
 		}
 	}
 
 
 }
+
+
+export default connect(MapStateToProps)(ShoppingCartContainer)
+
