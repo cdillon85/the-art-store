@@ -10,19 +10,27 @@ const express = require('express')
 const router = new express.Router()
 module.exports = router
 
+
 router.get('/', function( req, res, next) {
-  Products.findAll()
+  console.log('first route entered, paintings rendered')
+  Products.findAll({
+    include: [{model: Artist, as:'artists'}]
+  })
   .then(function(products) {
-    res.send(products)
+    console.log('rendered paintings')
+    res.send(products) // switch it to jSON??
+
   }
   )
   .catch(next)
 })
 
+
 router.get('/:id', function(req, res, next) {
     Products.findById(req.params.id)
     .then(function(product){
-      res.send(product);
+      res.send(product); // switch it to jSON??
     })
     .catch(next)
 })
+

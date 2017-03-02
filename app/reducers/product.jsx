@@ -22,6 +22,7 @@ export const loadAllProducts = function() {
 	}
 }
 
+
 //REDUCER
 const productReducer = (products = [], action) => {
 

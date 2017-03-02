@@ -19,7 +19,6 @@ import {loadAllProducts} from './reducers/product'
 import {loadSingleProduct} from './reducers/singleProduct'
 import ShoppingCartContainer from './components/ShoppingCartContainer'
 
-
 const ExampleApp = connect(
   ({ auth }) => ({ user: auth })
 )(
@@ -30,9 +29,9 @@ const ExampleApp = connect(
     </div>
 )
 
-const onProductEnter = function(nextRouterState) {
-  store.dispatch(loadAllProducts())
-}
+// const onProductEnter = function(nextRouterState) {
+//   store.dispatch(loadAllProducts())
+// }
 
 const onSingleProductEnter = function(nextRouterState) {
   const productId = nextRouterState.params.productId
