@@ -29,7 +29,7 @@ router.get('/', function( req, res, next) {
 router.get('/:id', function(req, res, next) {
     Products.findById(req.params.id)
     .then(function(product){
-      res.send(product); // switch it to jSON??
+      res.send(product) // res.json or send, why?
     })
     .catch(next)
 })
