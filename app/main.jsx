@@ -9,10 +9,14 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
 
+import ProductListContainer from './components/ProductListContainer'
+import SingleProductContainer from './components/SingleProductContainer'
+
 import store from './store'
 import AppCont from './components/AppContainer'
-import ProductListContainer from './components/ProductListContainer';
+
 import {loadAllProducts} from './reducers/product'
+import {loadSingleProduct} from './reducers/singleProduct'
 import ShoppingCartContainer from './components/ShoppingCartContainer'
 
 
@@ -30,9 +34,15 @@ const onProductEnter = function(nextRouterState) {
   store.dispatch(loadAllProducts())
 }
 
+const onSingleProductEnter = function(nextRouterState) {
+  const productId = nextRouterState.params.productId
+  store.dispatch(loadSingleProduct(productId))
+}
+
 const AppRoutes = (
   <Route path="/" component={ExampleApp}>
     <Route path="/productList" component={ProductListContainer} onEnter={onProductEnter} />
+    <Route path="/products/:productId" component={SingleProductContainer} onEnter={onSingleProductEnter} />
     <Route path="/cart" component={ShoppingCartContainer} />
   </Route>
 )
