@@ -67,3 +67,16 @@ router.delete('/:id', function(req, res, next){
   .catch(next)
 })
 
+router.put('/checkout/:cartId', function(req, res, next){
+  Orders.update({
+    status: 'order',
+  }, {
+    where: {
+      id: req.params.cartId
+    }
+  })
+  .then(affectedRows => res.json(affectedRows))
+  .catch(next)
+})
+
+
