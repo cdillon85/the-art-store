@@ -2,14 +2,14 @@ import React from 'react'
 
 
 export default function ShoppingCartComponent (props) {
+  
   const divStyle = {
     height: 50,
     width: 50
-}
+  }
 
 	return (
 		<div>
-
 		<h1>Shopping Cart</h1>
 
 		<table className="shopping-cart">
@@ -40,6 +40,5 @@ export default function ShoppingCartComponent (props) {
 		</tbody>
 		</table>
 		</div>
-
-	)
+	)	
 }
