@@ -1,4 +1,5 @@
 import axios from 'axios'
+
 import {login} from './auth'
 import {setCurrentCart} from './cart'
 
@@ -16,6 +17,7 @@ export const createUser = (newUser) =>
 (dispatch) => {
 	axios.post('/api/users', newUser)
 	.then(response => {
+
 		dispatch(login(response.data.email, response.data.password))
 		console.log('new user created', response.data)
 		return response

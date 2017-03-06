@@ -24,8 +24,6 @@ import ShoppingCartContainer from './components/ShoppingCartContainer'
 import CheckOutContainer from './components/CheckOutContainer'
 import SignInPageContainer from './components/SignInPageContainer'
 
-
-
 const ExampleApp = connect(
   ({ auth }) => ({ user: auth })
 )(

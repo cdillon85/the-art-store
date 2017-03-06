@@ -22,7 +22,7 @@ const mapDispatchToProps = (dispatch) => {
 	}
 }
 
-class SignUpPageContainer extends Component {
+class SignInPageContainer extends Component {
 
 	constructor(props) {
 		super(props)
@@ -79,12 +79,13 @@ class SignUpPageContainer extends Component {
 				password2: '',
 				passwordMismatch: false,
 				message: ''})
-			this.props.createNewUser(this.state)
-		
+
+			this.props.createNewUser(this.state)		
 			}
 		}
 
 	render() {
+
 		const userExists = this.props.userExists
 		const userCreated = this.props.newUserCreated
 		let userMessage = ""
