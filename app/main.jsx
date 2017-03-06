@@ -22,6 +22,8 @@ import {loadSingleProduct} from './reducers/singleProduct'
 import {loadAccountOrders} from './reducers/account'
 import ShoppingCartContainer from './components/ShoppingCartContainer'
 import CheckOutContainer from './components/CheckOutContainer'
+import SignInPageContainer from './components/SignInPageContainer'
+
 
 
 const ExampleApp = connect(
@@ -55,6 +57,7 @@ const AppRoutes = (
     <Route path="/cart" component={ShoppingCartContainer} />
     <Route path="/payment" component={PaymentContainer} />
     <Route path="/checkout" component={CheckOutContainer} />
+    <Route path="/signUp" component={SignInPageContainer} />
     <Route path="/accounts/:userId" component={AccountContainer} onEnter={onAccountEnter}/>
   </Route>
 )
