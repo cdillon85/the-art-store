@@ -38,6 +38,24 @@ router.get('/:userId/cart', function(req, res, next) {
     .catch(next)
 })
 
+//Return all product lines associated with a given user
+router.get('/:userId', function(req, res, next){
+  Orders.findAll({
+    where: {user_id: req.params.userId},
+    include: [{
+        model: ProductLines, as: 'productLines',
+        include: [{
+          model: Product, as: 'product'
+        }]
+    }]
+  })
+  .then(orders => {
+      res.send(orders);
+  })
+  .catch(next)
+})
+
+
 
 
 router.post('/addProduct', function(req, res, next){
