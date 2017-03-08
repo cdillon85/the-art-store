@@ -7,7 +7,7 @@ import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColu
 export default function CheckOutComponent (props) {
 
   const style = {
-    width: 800,
+    width: '100%',
     margin: 12,
 }
 
@@ -16,10 +16,15 @@ export default function CheckOutComponent (props) {
 	  width: 100
 }
 
+const btnStyle = {
+  margin: 12
+}
+
   return (
     <div>
+    <div className="checkout-component">
       <Paper zDepth={4} style={style}>
-      <h3>Order Confirmation</h3>
+      <h1 className="shopping-cart-header">Order Confirmation</h1>
       <Table displayRowCheckbox={false}>
           <TableHeader displaySelectAll={false}>
           <TableRow>
@@ -45,16 +50,17 @@ export default function CheckOutComponent (props) {
       </Paper>
       {
         props.auth ? (
-          <RaisedButton label="Payment & Shipping" style={style} onClick={() => props.continue()} />
+          <RaisedButton label="Payment & Shipping" style={btnStyle} onClick={() => props.continue()} />
         ) : (
           <div>
-             <RaisedButton label="Create an Account" style={style} onClick={() => props.createUser()} />
-            <RaisedButton label="Log In" style={style} onClick={() => props.signInUser()} />
-             <RaisedButton label="Continue as Guest" style={style} onClick={() => props.continue()} />
+             <RaisedButton label="Create an Account" style={btnStyle} onClick={() => props.createUser()} />
+            <RaisedButton label="Log In" style={btnStyle} onClick={() => props.signInUser()} />
+             <RaisedButton label="Continue as Guest" style={btnStyle} onClick={() => props.continue()} />
 
           </div>
         )
       }
+    </div>  
     </div>
   )
 }

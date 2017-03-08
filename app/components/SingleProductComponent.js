@@ -25,13 +25,13 @@ export default function SingleProductComponent (props) {
         <FlatButton
           key="1"
           label="Continue Shopping"
-          primary={true}
+          default={true}
           onTouchTap={() => {props.handleCloseShop()}}
         />,
         <FlatButton
           key="2"
           label="Checkout"
-          primary={true}
+          default={true}
           keyboardFocused={true}
           onTouchTap={() => {
             handleCloseCheckout()
@@ -44,10 +44,12 @@ export default function SingleProductComponent (props) {
       <div className="single-product">
           <h1 className="product-title"> {product.title} </h1>
           <img src={product.url} style={divStyle}  />
+          <div className="product-info">
            <div> {product.artistName} </div>
            <div> {product.year} </div>
            <div> ${product.price} </div>
            <span> {product.description} </span>
+           </div>
           <span> 
           <RaisedButton
           id="Button"
