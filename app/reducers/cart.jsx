@@ -91,6 +91,7 @@ export const convertCartToOrderGuest = (cart, details) =>
       .catch(error => console.error('Order failed', error))
 }
 
+//This method has been refactored in another branch to be more efficient and module, and will be merged pending tests
 export const addProductToCart = (productId) =>
   (dispatch, getState) =>
   //fetch item from db using product id
