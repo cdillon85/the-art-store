@@ -1,12 +1,5 @@
 import React from 'react'
 import {browserHistory} from 'react-router'
-import RaisedButton from 'material-ui/RaisedButton'
-
-const buttonStyle = {
-  margin: 20,
-  float: 'center',
-  borderColor: 'white'
-}
 
 export const CheckOutLogin = ({ login }) => (
   <div className="log-in-form">
@@ -16,7 +9,9 @@ export const CheckOutLogin = ({ login }) => (
     browserHistory.goBack()
   } } >
   <h1 className="log-in-title">Log In</h1>
-    <input name="username"  type="username"/>
+
+    <input name="username"  type="username" />
+
     <input name="password" type="password" />
     <input type="submit" value="Login" />
   </form>

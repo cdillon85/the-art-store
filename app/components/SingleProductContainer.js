@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react'
 import SingleProductComponent from './SingleProductComponent'
 import {connect} from 'react-redux'
@@ -61,22 +60,17 @@ class SingleProductContainer extends Component {
 		return (
 			<div>
 			<SingleProductComponent
-			{...this.props}
-			open={this.state.open}
-			action={this.state.action}
-			handleClick={this.handleClick}
-			handleOpen={this.handleOpen}
-			handleCloseCheckout={this.handleCloseCheckout}
-			handleCloseShop={this.handleCloseShop} />
+				{...this.props}
+				open={this.state.open}
+				action={this.state.action}
+				handleClick={this.handleClick}
+				handleOpen={this.handleOpen}
+				handleCloseCheckout={this.handleCloseCheckout}
+				handleCloseShop={this.handleCloseShop} />
 			</div>
 		)
 	}
 }
 
-export default connect(
-	mapStateToProps,
-	mapDispatchToProps
-	)(SingleProductContainer)
-
-
+export default connect(mapStateToProps, mapDispatchToProps)(SingleProductContainer)
 

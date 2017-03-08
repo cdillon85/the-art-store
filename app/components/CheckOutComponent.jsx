@@ -1,5 +1,4 @@
 import React from 'react'
-import {Link} from 'react-router'
 import RaisedButton from 'material-ui/RaisedButton'
 import Paper from 'material-ui/Paper'
 import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/Table'
@@ -11,9 +10,9 @@ export default function CheckOutComponent (props) {
     margin: 12,
 }
 
-  const imageStyle = {
-  	height: 100,
-	  width: 100
+
+const btnStyle = {
+  margin: 12
 }
 
 const btnStyle = {
@@ -61,6 +60,7 @@ const btnStyle = {
         )
       }
     </div>  
+    </div>
     </div>
   )
 }

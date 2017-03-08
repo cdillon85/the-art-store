@@ -15,26 +15,25 @@ export default function SignUpPageComponent (props) {
 
 	return (
 		<form>
-		<div className='form-element'>
-		<input type="text" placeholder="Name" onChange={nameHandleChange} />
+		<div className="form-element">
+			<input type="text" placeholder="Name" onChange={nameHandleChange} />
 		</div>
 
-		<div className='form-element'>
-		<input type="text" placeholder="Email" onChange={emailHandleChange} />
+		<div className="form-element">
+			<input type="text" placeholder="Email" onChange={emailHandleChange} />
 		</div>
 
-		<div className='form-element'>
-		<input type="text" placeholder="Password" onChange={passwordHandleChange} />
+		<div className="form-element">
+			<input type="text" placeholder="Password" onChange={passwordHandleChange} />
 		</div>
 
-		<div className='form-element'>
-		<input type="text" placeholder="Re-Type Password" onChange={confirmationPassChange} />
+		<div className="form-element">
+			<input type="text" placeholder="Re-Type Password" onChange={confirmationPassChange} />
 		</div>
 		<div>
-		<RaisedButton label="Submit" style={buttonStyle} onClick={handleSubmit} /> </div>
+			<RaisedButton label="Submit" style={buttonStyle} onClick={handleSubmit} />
+		</div>
 		</form>
 		)
-
 }
-
 

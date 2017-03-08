@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
-import SignUpPageComponent from './SignUpPageComponent' 
+import SignUpPageComponent from './SignUpPageComponent'
 import {createUser} from '../reducers/user'
 import {browserHistory} from 'react-router'
 
@@ -13,7 +13,6 @@ const mapStateToProps = (state) => {
 		userExists
 	}
 }
-
 
 const mapDispatchToProps = (dispatch) => {
 	return {
@@ -89,27 +88,27 @@ class SignInPageContainer extends Component {
 	render() {
 
 		const userExists = this.props.userExists
-		let userMessage = ""
+		let userMessage = ''
 
 		if (userExists) {
 			userMessage = <h5> User already exists </h5>
-		} 
-		
+		}
+
 		return (
 			<div>
-			<div className="sign-up-form">
-			<h1 className="sign-up-title"> Sign Up </h1>
-			<SignUpPageComponent 
-			nameHandleChange={this.nameHandleChange}  
-			passwordHandleChange={this.passwordHandleChange} 
-			emailHandleChange={this.emailHandleChange} 
-			confirmationPassChange={this.confirmationPassChange} 
-			handleSubmit={this.handleSubmit}
-			passwordMismatch={this.state.passwordMismatch}
-			/>
-			<h5> {this.state.message} </h5>
-			{userMessage}
-			</div> 
+				<div className="sign-up-form">
+					<h1 className="sign-up-title"> Sign Up </h1>
+						<SignUpPageComponent
+							nameHandleChange={this.nameHandleChange} 
+							passwordHandleChange={this.passwordHandleChange}
+							emailHandleChange={this.emailHandleChange}
+							confirmationPassChange={this.confirmationPassChange}
+							handleSubmit={this.handleSubmit}
+							passwordMismatch={this.state.passwordMismatch}
+							/>
+					<h5> {this.state.message} </h5>
+					{userMessage}
+				</div>
 			</div>
 		)
 

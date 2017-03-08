@@ -5,11 +5,11 @@ import List from 'material-ui/List/List'
 import ListItem from 'material-ui/List/ListItem'
 
 
-
 export const WhoAmI = ({ user, logout }) => {
 	const firstLetter = user.name[0].toUpperCase()
+
 	const style = {margin: 5, float: 'right'}
-	
+
 	return (
 	  <div className="whoami">
 		<List className="whoami-text">
@@ -18,7 +18,7 @@ export const WhoAmI = ({ user, logout }) => {
 		      leftAvatar={
 		        <Avatar>{firstLetter}</Avatar>
 		      }
-		    >Hello {user && user.name}! 
+		    >Hello {user && user.name}!
 
 	    <RaisedButton label="Log Out" style={style}  onClick={logout} />
 	    </ListItem>

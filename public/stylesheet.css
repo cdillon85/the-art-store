@@ -169,7 +169,8 @@
 }
 
 .payment-2{
-	float:left
+	float:left;
+	padding-left:125px;
 }
 
 .checkout-thankyou-container{
