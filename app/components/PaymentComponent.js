@@ -9,6 +9,7 @@ import Paper from 'material-ui/Paper'
 
 const buttonStyle = {
   width: '100%'
+}
 
 const style = {
   height: 100,

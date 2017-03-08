@@ -32,9 +32,6 @@ class OrderConfirmationContainer extends Component {
           {(order[0] !== undefined) && <OrderComponent orders={order} orderNumber={0} totalCost={totalCost} />}
           </div>
         </div>
-
-    </div>
-    </div>
     </div>
 )
 }

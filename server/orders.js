@@ -56,7 +56,6 @@ router.get('/:userId', function(req, res, next){
 
 //return an individual order
 router.get('/order/:orderId', function(req, res, next){
-  console.log("Inside return individual order")
   Orders.findById(req.params.orderId,{
    where: {user_id: req.params.userId},
     include: [{

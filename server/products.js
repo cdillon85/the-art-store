@@ -15,7 +15,6 @@ module.exports = router
 router.get('/', function( req, res, next) {
   Products.findAll()
   .then(function(products) {
-    console.log('rendered paintings')
     res.send(products) // switch it to jSON??
 
   }

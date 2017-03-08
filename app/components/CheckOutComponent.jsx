@@ -15,10 +15,6 @@ const btnStyle = {
   margin: 12
 }
 
-const btnStyle = {
-  margin: 12
-}
-
   return (
     <div>
     <div className="checkout-component">
@@ -59,7 +55,6 @@ const btnStyle = {
           </div>
         )
       }
-    </div>  
     </div>
     </div>
   )
