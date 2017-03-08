@@ -5,9 +5,11 @@ export default function FilterInputComponent (props) {
 	const inputValue = props.inputValue
 	const searchTerm = 'Enter ' + props.searchTerm
 	const style = {textAlign:'center'}
+
 	return (
 		<form>
 		<input
+		style={searchBarStyle} 
 		onChange={handleChange}
 		value={inputValue}
 		className="form-control"

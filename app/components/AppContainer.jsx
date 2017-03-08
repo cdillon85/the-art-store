@@ -8,10 +8,6 @@ import RaisedButton from 'material-ui/RaisedButton'
 import Dialog from 'material-ui/Dialog'
 import FlatButton from 'material-ui/FlatButton'
 
-const navStyle = {
-  textAlign: 'center',
-  boxshadow: '10px 10px 5px #888888'
-}
 
 const buttonStyle = {
   margin: 20,
@@ -29,7 +25,6 @@ const MapStateToProps = (state) => {
   }
 }
 
-
 class AppContainer extends Component {
 
   constructor(props){
@@ -38,21 +33,20 @@ class AppContainer extends Component {
   }
 
   onClick (value) {
-  browserHistory.push(value)
-}
+    browserHistory.push(value)
+  }
 
   onSignUpClick (){
-  browserHistory.push('/signup')
+    browserHistory.push('/signup')
   }
 
   onLogInClick (){
-  browserHistory.push('/login')
+    browserHistory.push('/login')
   }
 
 
 
   render() {
-
     return (
             <div>
             <div>
@@ -72,6 +66,5 @@ class AppContainer extends Component {
             </div>
     )
   }
-}
 
-export default connect(MapStateToProps)(AppContainer)
+  export default connect(MapStateToProps)(AppContainer)

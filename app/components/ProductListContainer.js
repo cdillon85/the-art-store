@@ -7,12 +7,6 @@ import { RadioButton, RadioButtonGroup } from 'material-ui/RadioButton'
 import JumbotronContainer from './JumbotronContainer'
 
 
-const searchBar = {
-  color: 'black',
-  fontSize: 30
-}
-
-
 const mapStateToProps = ({products}) => {
 	return {
 		products
@@ -65,7 +59,6 @@ class ProductListContainer extends Component {
 		} else if (this.state.search === 'Color'){
 			filteredProducts = this.props.products.filter(product => {
 				if (inputValue !== ''){
-					console.log(product.tags.map(tags => tags.toLowerCase()), 'these are tags')
 					return product.tags.map(tags => tags.toLowerCase()).includes(inputValue)			
 				}
 				else {
@@ -75,6 +68,7 @@ class ProductListContainer extends Component {
 		} else if (this.state.search === 'Medium'){
 			filteredProducts = this.props.products.filter(product =>  product.medium.toLowerCase().match(inputValue))
 		}
+		
 		return (
 			<div>
 			<JumbotronContainer />
