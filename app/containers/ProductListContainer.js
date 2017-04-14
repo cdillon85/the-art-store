@@ -5,7 +5,6 @@ import { loadSelectedProduct } from '../reducers/product'
 
 import ProductListComponent from '../components/ProductListComponent'
 import FilterInputComponent from '../components/FilterInputComponent'
-import JumbotronComponent from '../components/JumbotronComponent'
 
 import { RadioButton } from 'material-ui/RadioButton'
 
@@ -75,7 +74,7 @@ class ProductListContainer extends Component {
 		
 		return (
 			<div>
-			<JumbotronComponent />
+			<div className="page-break"/>
 			<h1 className="search-bar-title"> Search The Collection</h1>
 			<div className="radio-btn-master">
 				<div className="radio-btn-container">
@@ -94,6 +93,7 @@ class ProductListContainer extends Component {
 				</div>
 			</div>
 			<FilterInputComponent handleChange={this.handleChange} inputValue={inputValue} searchTerm={this.state.search} />
+			<div className="page-break"/>
 			<ProductListComponent products={filteredProducts} />
 			</div>
 			)
