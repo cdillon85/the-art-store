@@ -14,7 +14,7 @@ import SingleProductContainer from './containers/SingleProductContainer'
 import PaymentContainer from './containers/PaymentContainer'
 import AccountContainer from './containers/AccountContainer'
 import OrderConfirmationContainer from './containers/OrderConfirmationContainer'
-import GuestOrderConfirmationComponent from './component/GuestOrderConfirmationComponent'
+import GuestOrderConfirmationComponent from './components/GuestOrderConfirmationComponent'
 
 import store from './store'
 import AppCont from './containers/AppContainer'

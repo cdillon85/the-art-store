@@ -9,11 +9,6 @@ import JumbotronComponent from '../components/JumbotronComponent'
 
 import { RadioButton } from 'material-ui/RadioButton'
 
-const searchBar = {
-  color: 'black',
-  fontSize: 30
-}
-
 const mapStateToProps = ({products}) => {
 	return {
 		products
