@@ -1,9 +1,4 @@
 import React from 'react'
-import RaisedButton from 'material-ui/RaisedButton'
-import Avatar from 'material-ui/Avatar'
-import List from 'material-ui/List/List'
-import ListItem from 'material-ui/List/ListItem'
-
 
 export const WhoAmI = ({ user, logout }) => {
 	const firstLetter = user.name[0].toUpperCase()
@@ -12,17 +7,11 @@ export const WhoAmI = ({ user, logout }) => {
 
 	return (
 	  <div className="whoami">
-		<List className="whoami-text">
-		    <ListItem
-		      disabled={true}
-		      leftAvatar={
-		        <Avatar>{firstLetter}</Avatar>
-		      }
-		    >Hello {user && user.name}!
-
-	    <RaisedButton label="Log Out" style={style}  onClick={logout} />
-	    </ListItem>
-	    </List>
+		<div className="whoami-text icon">
+		<i className="fa fa-user-circle" aria-hidden="true"></i>    
+		Hello {user && user.name}!
+	    <div onClick={logout}>Log-out</div>
+	    </div>
 	  </div>
 )}
 
