@@ -9,26 +9,26 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import injectTapEventPlugin from 'react-tap-event-plugin'
 injectTapEventPlugin()
 
-import ProductListContainer from './components/ProductListContainer'
-import SingleProductContainer from './components/SingleProductContainer'
-import PaymentContainer from './components/PaymentContainer'
-import AccountContainer from './components/AccountContainer'
-import OrderConfirmationContainer from './components/OrderConfirmationContainer'
-import GuestOrderConfirmationContainer from './components/GuestOrderConfirmationContainer'
+import ProductListContainer from './containers/ProductListContainer'
+import SingleProductContainer from './containers/SingleProductContainer'
+import PaymentContainer from './containers/PaymentContainer'
+import AccountContainer from './containers/AccountContainer'
+import OrderConfirmationContainer from './containers/OrderConfirmationContainer'
+import GuestOrderConfirmationComponent from './component/GuestOrderConfirmationComponent'
 
 import store from './store'
-import AppCont from './components/AppContainer'
+import AppCont from './containers/AppContainer'
 
 import {loadAllProducts} from './reducers/product'
 import {loadSingleProduct} from './reducers/singleProduct'
 import {loadAccountOrders} from './reducers/account'
 import Login from './components/Login'
-import CheckOutLoginContainer from './components/CheckOutLoginContainer'
+import CheckOutLoginContainer from './containers/CheckOutLoginContainer'
 import {loadCurrentOrder} from './reducers/order'
-import ShoppingCartContainer from './components/ShoppingCartContainer'
-import CheckOutContainer from './components/CheckOutContainer'
-import SignUpPageContainer from './components/SignUpPageContainer'
-import CheckOutSignUpPageContainer from './components/CheckOutSignUpPageContainer'
+import ShoppingCartContainer from './containers/ShoppingCartContainer'
+import CheckOutContainer from './containers/CheckOutContainer'
+import SignUpPageContainer from './containers/SignUpPageContainer'
+import CheckOutSignUpPageContainer from './containers/CheckOutSignUpPageContainer'
 
 const ExampleApp = connect(
   ({ auth }) => ({ user: auth })
@@ -67,7 +67,7 @@ const AppRoutes = (
     <Route path="/products/:productId" component={SingleProductContainer} onEnter={onSingleProductEnter} />
     <Route path="/cart" component={ShoppingCartContainer} />
     <Route path="/payment" component={PaymentContainer} />
-    <Route path="/confirm/guestOrder" component={GuestOrderConfirmationContainer} />
+    <Route path="/confirm/guestOrder" component={GuestOrderConfirmationComponent} />
     <Route path="/confirm/:orderId" component={OrderConfirmationContainer} onEnter={onConfirmationEnter}/>
     <Route path="/checkout" component={CheckOutContainer} />
     <Route path="/checkout-login" component={CheckOutLoginContainer} />

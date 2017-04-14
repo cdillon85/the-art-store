@@ -1,10 +1,12 @@
 import React, { Component }  from 'react'
-import {Tabs, Tab} from 'material-ui'
-import { browserHistory } from 'react-router'
 import {connect} from 'react-redux'
-import WhoAmI from './WhoAmI'
+
+import { browserHistory } from 'react-router'
+
+import {Tabs, Tab} from 'material-ui'
 import RaisedButton from 'material-ui/RaisedButton'
 
+import WhoAmI from '../components/WhoAmIComponent'
 
 const navStyle = {
   textAlign: 'center',
@@ -63,7 +65,6 @@ class AppContainer extends Component {
                 <Tab label="Home"  style={navBar} onActive={() => this.onClick('/products')} />
                 <Tab label="Cart" style={navBar} onActive={() => this.onClick('/cart')} />
                 {this.props.user ? <Tab label="Account" style={navBar} onActive={() => this.onClick(`/accounts/${this.props.user.id}`)} /> : ''}
-
               </Tabs>
             </div>
     )

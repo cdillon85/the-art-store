@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
-import OrderComponent from './OrderComponent'
+
+import OrderComponent from '../components/OrderComponent'
 
 const MapStateToProps = (state) => {
   return {

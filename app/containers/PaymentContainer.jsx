@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
-import PaymentComponent from './PaymentComponent'
+
 import { browserHistory } from 'react-router'
+
 import { convertCartToOrderAuth, convertCartToOrderGuest } from '../reducers/cart'
+
+import PaymentComponent from '../components/PaymentComponent'
 
 const MapStateToProps = (state) => {
   const cart = state.cart

@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
-import SingleProductComponent from './SingleProductComponent'
 import {connect} from 'react-redux'
-import {addProductToCart} from '../reducers/cart'
+
 import {browserHistory} from 'react-router'
+
+import {addProductToCart} from '../reducers/cart'
+
+import SingleProductComponent from '../components/SingleProductComponent'
 
 
 const mapStateToProps = ({product}) => {

@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
-import ShoppingCartComponent from './ShoppingCartComponent'
 import {connect} from 'react-redux'
+
 import { browserHistory } from 'react-router'
-import RaisedButton from 'material-ui/RaisedButton'
+
 import {deleteProductLineFromCart} from '../reducers/cart'
 
+import ShoppingCartComponent from '../components/ShoppingCartComponent'
+
+import RaisedButton from 'material-ui/RaisedButton'
 
 const MapStateToProps = (state) => {
 	const cart = state.cart

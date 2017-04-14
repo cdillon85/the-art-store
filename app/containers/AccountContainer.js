@@ -1,5 +1,5 @@
-import AccountComponent from './AccountComponent'
 import {connect} from 'react-redux'
+import AccountComponent from '../components/AccountComponent'
 
 const mapStateToProps = (state) => {
 	return {
@@ -8,7 +8,7 @@ const mapStateToProps = (state) => {
 	}
 }
 
-export default connect(mapStateToProps)(AccountComponent)
+export default connect(mapStateToProps, null)(AccountComponent)
 
 
 

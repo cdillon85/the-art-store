@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
-import SignUpPageComponent from './SignUpPageComponent'
-import {createUser} from '../reducers/user'
+
 import {browserHistory} from 'react-router'
+
+import {createUser} from '../reducers/user'
+
+import SignUpPageComponent from '../components/SignUpPageComponent'
 
 
 const mapStateToProps = (state) => {
@@ -14,7 +17,6 @@ const mapStateToProps = (state) => {
 	}
 }
 
-
 const mapDispatchToProps = (dispatch) => {
 	return {
 		createNewUser: (newUser) => {
@@ -23,7 +25,7 @@ const mapDispatchToProps = (dispatch) => {
 	}
 }
 
-class CheckOutSignUpPageContainer extends Component {
+class SignInPageContainer extends Component {
 
 	constructor(props) {
 		super(props)
@@ -69,10 +71,10 @@ class CheckOutSignUpPageContainer extends Component {
 	handleSubmit(evt) {
 		evt.preventDefault()
 		if (this.state.password !== this.state.password2) {
-			 this.setState({message: 'Passwords do not match'})
+			 this.setState({message: "Passwords don't match"})
 		} else if (this.state.password === this.state.password2 && this.state.password.length < 6) {
-			this.setState({message: 'Password needs to be longer than 6 characters'})
-		} else if (this.state.password === this.state.password2 && this.state.password !== '' && this.state.password.length >= 6) {
+			this.setState({message: "Password needs to be longer than 6 characters"})
+		} else if (this.state.password === this.state.password2 && this.state.password !== "" && this.state.password.length >= 6) {
 				this.setState({
 				name: '',
 				email: '',
@@ -81,8 +83,8 @@ class CheckOutSignUpPageContainer extends Component {
 				passwordMismatch: false,
 				message: ''})
 			this.props.createNewUser(this.state)
+			browserHistory.goBack()
 			}
-		browserHistory.goBack()
 		}
 
 
@@ -94,18 +96,19 @@ class CheckOutSignUpPageContainer extends Component {
 		if (userExists) {
 			userMessage = <h5> User already exists </h5>
 		}
+
 		return (
 			<div>
 				<div className="sign-up-form">
 					<h1 className="sign-up-title"> Sign Up </h1>
 						<SignUpPageComponent
-							nameHandleChange={this.nameHandleChange}
+							nameHandleChange={this.nameHandleChange} 
 							passwordHandleChange={this.passwordHandleChange}
 							emailHandleChange={this.emailHandleChange}
 							confirmationPassChange={this.confirmationPassChange}
 							handleSubmit={this.handleSubmit}
 							passwordMismatch={this.state.passwordMismatch}
-						/>
+							/>
 					<h5> {this.state.message} </h5>
 					{userMessage}
 				</div>
@@ -116,4 +119,5 @@ class CheckOutSignUpPageContainer extends Component {
 
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(CheckOutSignUpPageContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(SignInPageContainer)
+

@@ -1,7 +1,7 @@
 {
-  "name": "art-auction",
+  "name": "the-art-store",
   "version": "0.0.1",
-  "description": "A happy little skeleton.",
+  "description": "a demo e-commerce store",
   "main": "index.js",
   "scripts": {
     "validate": "check-node-version --node '>= 6.7.0'",

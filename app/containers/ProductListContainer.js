@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
-import ProductListComponent from './ProductListComponent'
 import { connect } from 'react-redux'
-import FilterInputComponent from './FilterInputComponent'
+
 import { loadSelectedProduct } from '../reducers/product'
+
+import ProductListComponent from '../components/ProductListComponent'
+import FilterInputComponent from '../components/FilterInputComponent'
+import JumbotronComponent from '../components/JumbotronComponent'
+
 import { RadioButton } from 'material-ui/RadioButton'
-import JumbotronComponent from './JumbotronComponent'
 
 const searchBar = {
   color: 'black',

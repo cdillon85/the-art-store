@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
-import CheckOutComponent from './CheckOutComponent'
+
 import { browserHistory } from 'react-router'
+
+import CheckOutComponent from '../components/CheckOutComponent'
 
 const MapStateToProps = (state) => {
   const cart = state.cart
@@ -48,4 +50,4 @@ class CheckOutContainer extends Component {
   }
 }
 
-export default connect(MapStateToProps)(CheckOutContainer)
+export default connect(MapStateToProps, null)(CheckOutContainer)

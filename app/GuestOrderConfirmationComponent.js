@@ -4,7 +4,7 @@ import Subheader from 'material-ui/Subheader'
 import { browserHistory } from 'react-router'
 import RaisedButton from 'material-ui/RaisedButton'
 
-export default function GuestOrderConfirmationContainer () {
+export default function GuestOrderConfirmationComponent () {
 
   const style = {
     width: '100%',

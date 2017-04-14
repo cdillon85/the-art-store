@@ -9,20 +9,14 @@ export const CheckOutLogin = ({ login }) => (
     browserHistory.goBack()
   } } >
   <h1 className="log-in-title">Log In</h1>
-
     <input name="username"  type="username" />
-
     <input name="password" type="password" />
     <input type="submit" value="Login" />
   </form>
   </div>
 )
 
-
 import {login} from 'APP/app/reducers/auth'
 import {connect} from 'react-redux'
 
-export default connect(
-  null,
-  {login},
-)(CheckOutLogin)
+export default connect(null, {login})(CheckOutLogin)
