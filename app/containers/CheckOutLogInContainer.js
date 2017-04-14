@@ -2,17 +2,25 @@ import React from 'react'
 import {browserHistory} from 'react-router'
 
 export const CheckOutLogin = ({ login }) => (
-  <div className="log-in-form">
-  <form onSubmit={evt => {
-    evt.preventDefault()
-    login(evt.target.username.value, evt.target.password.value)
-    browserHistory.goBack()
-  } } >
+   <div className="log-in-form">
   <h1 className="log-in-title">Log In</h1>
-    <input name="username"  type="username" />
-    <input name="password" type="password" />
-    <input type="submit" value="Login" />
-  </form>
+  <p className="text"> access your acccount & order history</p>
+       <form onSubmit={evt => {
+      evt.preventDefault()
+      login(evt.target.username.value, evt.target.password.value)
+      browserHistory.goBack()
+    } } >
+        <div className="form-title">email</div>
+        <div className="form-input-container" >
+        <input className="form-input" type="text" />
+        </div>
+        <div className="form-title">password</div>
+        <div className="form-input-container" >
+        <input className="form-input" type="text" />
+        </div>
+          </form>
+        <button id="login-btn">log in</button>
+      <p className="text">don't have an account?</p>
   </div>
 )
 
