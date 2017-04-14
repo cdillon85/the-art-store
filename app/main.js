@@ -23,7 +23,7 @@ import HeaderContainer from './containers/HeaderContainer'
 import {loadAllProducts} from './reducers/product'
 import {loadSingleProduct} from './reducers/singleProduct'
 import {loadAccountOrders} from './reducers/account'
-import Login from './components/Login'
+import LoginComponent from './components/LoginComponent'
 import CheckOutLoginContainer from './containers/CheckOutLoginContainer'
 import {loadCurrentOrder} from './reducers/order'
 import ShoppingCartContainer from './containers/ShoppingCartContainer'
@@ -67,7 +67,7 @@ const AppRoutes = (
   <Route path="/" component={ExampleApp}>
     <IndexRoute component={JumbotronComponent} />
     <Route path="/collection" component={ProductListContainer} onEnter={onProductEnter} />
-    <Route path='/about' component={AboutComponent} />
+    <Route path="/about" component={AboutComponent} />
     <Route path="/products/:productId" component={SingleProductContainer} onEnter={onSingleProductEnter} />
     <Route path="/cart" component={ShoppingCartContainer} />
     <Route path="/payment" component={PaymentContainer} />
@@ -77,7 +77,7 @@ const AppRoutes = (
     <Route path="/checkout-login" component={CheckOutLoginContainer} />
     <Route path="/checkout-signup" component={CheckOutSignUpPageContainer} />
     <Route path="/signup" component={SignUpPageContainer} />
-    <Route path="/login" component={Login} />
+    <Route path="/login" component={LoginComponent} />
     <Route path="/accounts/:userId" component={AccountContainer} onEnter={onAccountEnter} />
   </Route>
 )
