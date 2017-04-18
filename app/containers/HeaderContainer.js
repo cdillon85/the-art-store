@@ -27,7 +27,7 @@ class HeaderContainer extends Component {
     return (
             <div>
                   <div className="login-sign-up-header">
-                  <div className="header" onClick={() => this.onButtonClick('/')}>THE ART SHOP</div>
+                  <div className="header" onClick={() => this.onButtonClick('/')}>THE ART STORE</div>
                   <div className="header-btn" onClick={() => this.onButtonClick('/collection')}>shop</div>
                   {this.props.user ? <WhoAmI /> :
                     <div className="header-btn"><div onClick={() => this.onButtonClick('/login')}>log in</div> </div>}
