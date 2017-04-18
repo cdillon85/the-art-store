@@ -28,7 +28,7 @@ const JumbotronComponent = () => (
 			      <img width={900} height={500} alt="900x500" src="/Minimal_Home.jpg" />
 			     </div>
 			      <Carousel.Caption>
-			        <h3>THE ART SHOP FEATURED IN ARCHITECTURAL DIGEST</h3>
+			        <h3>THE ART STORE FEATURED IN ARCHITECTURAL DIGEST</h3>
 			        <p>"NYC's Best Kept Secret for the New Art Collector"</p>
 			      </Carousel.Caption>
 			    </Carousel.Item>
