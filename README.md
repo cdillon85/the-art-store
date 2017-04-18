@@ -7,7 +7,7 @@ My primary contributions to that project included:
 1.THE SHOPPING CART
 	* Creating React components to render the shopping cart.
 	* Setting up a redux reducer and thunk middleware to manage the state of the cart when items are added and removed.
-	* Ensuring that items in an existing users' cart persists between visits (even if they don't checkout).
+	* Ensuring that items in an existing users' cart persists between visits (even if they don't checkout).	
 	* Ensuring that items in a visitor's cart persists (even if they don't checkout).
 	
 2. DATABASE SEED FILE CREATION
