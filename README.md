@@ -4,7 +4,7 @@ The Art Store has its origins as a team project at Fullstack Academy to build an
 
 My primary contributions to that project included:
 
-1.THE SHOPPING CART: 
+1.THE SHOPPING CART
 	* Creating React components to render the shopping cart.
 	* Setting up a redux reducer and thunk middleware to manage the state of the cart when items are added and removed.
 	* Ensuring that items in an existing users' cart persists between visits (even if they don't checkout).
@@ -15,16 +15,16 @@ My primary contributions to that project included:
 3. LOG-IN/SIGN UP 
 	* Refactoring the Log-in and Sign up components so they were accessible at all stages of the shopping experience (not just on the home page) and would redirect users back to the page they were last on after logging them in.
 
-4. UI DESIGN & STYLING: 
+4. UI DESIGN & STYLING
 	* I was the sole front-end designer for this project and used a combination of bootstrap, Material-UI and pure CSS.
 
 
 Since then, I decided to create an offshoot project where I can continue to refine The Art Store. Here are some of the things I am currently working on:
 
-<s>* Update Header with new styling and UX effects</s>
-<s>* Create Homepage with jumbotron separate from products page</s>
-<s>* Update styling of products page including adding UX effects</s>
-<s>* Update styling of log-in page</s>
+* <s>Update Header with new styling and UX effects</s>
+* <s>Create Homepage with jumbotron separate from products page</s>
+* <s>Update styling of products page including adding UX effects</s>
+* <s> Update styling of log-in page</s>
 * Set Header to ‘fixed’ on Shop The Collection Page
 * Update Log-in form functionality so existing users can log-in
 * Create link to create new user from log-in page
